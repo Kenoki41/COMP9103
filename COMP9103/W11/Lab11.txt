@@ -1,0 +1,12 @@
+Insurance company
+You will be designing a GUI application for the  insurance company application we did last week.
+
+In week 10, we have designed a text-based menu system to handle the following functionalities.
+
+Add a new insurance policy for a client
+
+Lodge a claim against a policy
+
+Display details of all policies
+
+However now we need to be able to handle these functionalities using a GUI application. You are required to come up with a design to handle these functionalities in any way you like. But keep in mind we always looking for a user friendly design.  

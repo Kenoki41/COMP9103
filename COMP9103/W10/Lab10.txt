@@ -1,0 +1,55 @@
+Insurance company
+You will be writing a program to keep track of the insurance policies of a range of customers for an insurance company.
+
+The main menu will allow the following functions:
+
+Add a new insurance policy for a client
+
+Lodge a claim against a policy
+
+Display details of all policies
+
+When the user chooses option 1, the system should ask for the name of the person who wants to take out insurance through our company. The system checks that the person does not already have insurance, and if the check succeeds then the system repeatedly asks the user to select which insurance cover options are to be included. Once there are no more options, or if the user chooses ‘done’, then the insurance policy is finished and stored in the system.
+
+
+When the user chooses option 2, they must enter the name of a person who has already got insurance through the company. If the person is found to be in the system, the system updates a counter for that person which counts how many times they have lodged a claim against that policy.
+
+
+When the user selects option 3, all policies that have been created are displayed in full detail.
+
+
+Provided Files
+
+To help you to focus on the concepts which are new this week, you are once again being provided with some source code files to be the starting point of your program. You should read through these to understand what they do, and then start coding the tasks by adding to them and creating additional files.
+
+Tasks
+Please read through all the tasks before commencing work.
+
+1.  Complete the InsurancePolicy class to represent an insurance policy. This class needs to have a Set which will contain the particular CoverType objects that represent the insurance cover desired by the customer. Methods you need to write/completeare:
+
+includeCover ( CoverType ) – which should note the specified type of insurance cover as being included in this insurance policy.
+
+getPolicyCost – to return the total cost of the policy which is $100 plus the sum of all the included types of insurance cover.
+
+lodgeAnotherClaim (CoverType) – which should increase a counter that keeps track of how many times the person makes a claim against this policy. The parameter specifies which type of cover the claim is being lodged for. If the policy does not include that type of cover, then the counter is not increased.
+
+toString – which should display the policy number and list the types of cover included in the policy, as well as the total number of claims made so far. You should make use of an Iterator to show all the types of cover.
+
+
+2.   In the MainDriver class, complete the processing required for menu item 1 which creates a new InsurancePolicy. In particular, complete the code of the createNewPolicy() method, so that:
+
+a)  it presents a list of the types of insurance cover that is available for selection. You should use the for-each construct to present the list of choices. After the choices are presented, you should get the user’s selection. If the selection is valid, then you should include that cover type in the policy that is being created.
+
+b)   Once the user has finished selecting the types of cover for the current policy, you need to add the policy to the system’s database of all policies. This should be achieved by using a Map. The name of the person should be used to store the policy you have just created.
+
+
+3.In the MainDriver class, complete the processing required for menu item 2 which deals with lodging a claim against an existing InsurancePolicy. In particular, complete the code of the lodgeClaim () method, so that:
+
+a)  it asks for the name of the person by whom the policy was taken out.
+
+b)  it asks the user to select from a menu, the type of cover under which the claim is being made.
+
+c)  it attempts to lodge a claim on that policy for the type of cover just selected.
+
+
+4.   In the MainDriver class, complete the processing required for menu item 3 which deals with displaying details of all the InsurancePolicy objects. Once again, you should use an Iterator to cycle through all the objects, displaying each one, separating each by a blank line.
